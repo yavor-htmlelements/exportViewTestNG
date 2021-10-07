@@ -1,0 +1,28 @@
+.green{
+   
+    background-color: red;
+    
+    
+}
+
+.yellow {
+    color: black;
+    background-color: yellow;
+}
+
+.red {
+    color: white;
+    background-color: #B32D2F;
+}
+.green:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected), .jqx-widget .green:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected) {
+    color: black;
+    background-color: #b6ff00;
+}
+.yellow:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected), .jqx-widget .yellow:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected) {
+    color: black;
+    background-color: yellow;
+}
+.red:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected), .jqx-widget .red:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected) {
+    color: black;
+    background-color: #e83636;
+}

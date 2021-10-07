@@ -6,8 +6,108 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="./assets/jqwidgets/jqx-all.js"></script>
+  <script src="./assets/jqwidgets/jqxdata.js"></script>
+  <script src="./assets/jqwidgets/jqxgrid.export.js"></script>
+  <script src="./assets/jqwidgets/jqxdata.export.js"></script>
+  <script src="./assets/jqwidgets/jqxexport.js"></script>
+  <script src="./assets/jszip.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style>
+		#toolbar {
+			display: flex;
+			height: 100%;
+			padding: 0 1rem;
+		}
+		#toolbar.warning:after {
+			content: 'Selected data cannot be used to create a chart.';
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			transform: translateY(-50%);
+			color: var(--smart-error);
+		}
+		#toolbar > div {
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+			margin-right: 15px;
+			width: 35px;
+			height: 30px;
+			height: 100%;
+			font-size: 12px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			user-select: none;
+			cursor: pointer;
+		}
+			#toolbar > div:hover {
+				background-color: var(--smart-grid-column-header-background-hover);
+			}
+			#toolbar > div:active {
+				background-color: var(--smart-grid-column-header-background-active);
+			}
+			#toolbar > div.warning {
+				outline: 2px solid var(--smart-error);
+			}
+      #column {
+      background-image: url("create-column.png");
+      }
+      #line {
+      background-image: url("create-line.png");
+      }
+      #pie {
+      background-image: url("create-pie.png");
+      }
+      #bar {
+      background-image: url("create-bar.png");
+      }
+      #area {
+      background-image: url("create-area.png");
+      }
+      #scatter {
+      background-image: url("create-scatter.png");
+      }
+      [theme="dark"] #column {
+      background-image: url("create-column-dark.png");
+      }
+      [theme="dark"] #line {
+      background-image: url("create-line-dark.png");
+      }
+      [theme="dark"] #pie {
+      background-image: url("create-pie-dark.png");
+      }
+      [theme="dark"] #bar {
+      background-image: url("create-bar-dark.png");
+      }
+      [theme="dark"] #area {
+      background-image: url("create-area-dark.png");
+      }
+      [theme="dark"] #scatter {
+      background-image: url("create-scatter-dark.png");
+      }
+	</style>
 </head>
 <body>
-  <app-root></app-root>
-</body>
+  <app-root></app-root>  
+  <script>
+  window.onload = function() {
+    const script = document.createElement('script');
+  
+    script.type = "text/javascript";
+    script.src="https://www.jqwidgets.com/jquery-widgets-demo/jqwidgets/jqxexport.js"; 
+  
+    document.body.appendChild(script);
+  }
+  </script>
+  <!-- JSZip -->
+  <!-- pdfmake -->
+  <script type="text/javascript" src="https://www.jqwidgets.com/jquery-widgets-demo/scripts/pdfmake.min.js"></script>
+  <script type="text/javascript" src="https://www.jqwidgets.com/jquery-widgets-demo/scripts/vfs_fonts.js"></script>
+      <!-- jQWidgets -->   
+  </body>
 </html>
